@@ -41,6 +41,3 @@
       group: www
       recurse: yes
 
-- name: Copy 9panel Configuration
-  copy: src=9panel.conf dest=/etc/httpd/conf.d/
-  notify: restart nginx
