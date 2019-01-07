@@ -15,14 +15,24 @@
 - name: Enable 9panel I
   lineinfile:
     path: /data/apps/9panel/js/websoft9.js
-    regexp: '"name":"Java on Tomcat","switch":0,'
-    line: '"name":"Java on Tomcat","switch":1,'
+    regexp: '"name":"LNMT","switch":0,'
+    line: '"name":"LNMT","switch":1,'
 
-- name: Download Jump Page
-  get_url: url={{ item }} dest=/data/wwwroot/www.example.com
+- name: Set default site I
+  shell: cp -rp /data/apps/9panel/*  /data/wwwroot/www.example.com
+
+- name: Set default site II
+  file:
+    path: "/data/wwwroot/www.example.com/{{ item }}"
+    state: absent
   with_items:
-    - http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/9panel/9panel-php%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83/default%E8%B7%B3%E8%BD%AC/index.html
-    - http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/9panel/9panel-php%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83/default%E8%B7%B3%E8%BD%AC/此index页面可以删除.txt
+    - db.html
+    - ftp.html
+    - index.html
+    - tools.html
+
+- name: Set default site III
+  command: mv /data/wwwroot/www.example.com/example.html /data/wwwroot/www.example.com/index.html
 
 - name: Change apps directory Own
   file: 
@@ -30,4 +40,7 @@
       owner: www
       group: www
       recurse: yes
+
+- name: Copy 9panel Configuration
+  copy: src=9panel.conf dest=/etc/httpd/conf.d/
   notify: restart nginx

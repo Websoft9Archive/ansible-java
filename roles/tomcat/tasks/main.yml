@@ -1,9 +1,9 @@
 ---
 - name: Install JDK1.8
-  yum: name={{ item }} state=present
-  with_items: 
-    - java-1.8.0-openjdk
-    - java-1.8.0-openjdk-devel
+  yum: 
+    name: [java-1.8.0-openjdk,java-1.8.0-openjdk-devel]
+    state: present
+
 
 - name: Download Tomcat
   unarchive: 
@@ -49,7 +49,8 @@
 
 - name: fixed some problems
   lineinfile:
-      dest: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/security/java.security
+      dest: /usr/lib/jvm/java-1.8.0-openjdk/jre/lib/security/java.security
       regexp: 'securerandom.source=file:/dev/random'
       line: "securerandom.source=file:/dev/./urandom"
       state: present
+
