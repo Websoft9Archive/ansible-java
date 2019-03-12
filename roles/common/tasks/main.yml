@@ -17,7 +17,7 @@
 
 - name: Install Common Software
   yum: 
-    name: [yum-utils,wget,openssl,unzip,bzip2,expect,at,vim, screen, git, htop, yum-cron,ImageMagick, goaccess,MySQL-python,python-pip]
+    name: [yum-utils,wget,openssl,unzip,bzip2,expect,at,vim, screen, git, htop, yum-cron,ImageMagick, goaccess,MySQL-python,python-pip,redis]
     state: installed
   
 
@@ -50,3 +50,7 @@
       regexp: '/mnt/swap'
       line: "/mnt/swap swap swap defaults 0 0"
       state: present
+
+
+- name: Start redis
+  service: name=redis state=started enabled=yes
