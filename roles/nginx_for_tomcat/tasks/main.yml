@@ -16,6 +16,11 @@
     createhome: no
     home: /data/wwwroot/
 
+- name: Create Date directory
+  file: 
+    path: /data/
+    state: directory
+
 
 - name: Create WebSite directory
   file: 
