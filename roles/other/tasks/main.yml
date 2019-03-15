@@ -32,7 +32,7 @@
 # - name: Setting Directory Permission
 #   shell: find /data/* -type d -exec chmod 750 {} \;
 
-- name: Seting Owner and Group for Apache
+- name: Seting Owner and Group for nginx
   shell: chown -R www. {{item}}
   with_items:
     - /data/wwwroot
