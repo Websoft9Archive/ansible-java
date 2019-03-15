@@ -29,10 +29,7 @@
 - name: Setting File Permission
   shell: find /data/* -type f -exec chmod 640 {} \;
 
-# - name: Setting Directory Permission
-#   shell: find /data/* -type d -exec chmod 750 {} \;
-
-- name: Seting Owner and Group 
+- name: Seting Owner and Group
   shell: chown -R www. {{item}}
   with_items:
     - /data/wwwroot
