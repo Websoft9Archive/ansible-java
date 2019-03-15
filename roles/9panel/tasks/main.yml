@@ -15,8 +15,8 @@
 - name: Enable 9panel I
   lineinfile:
     path: /data/apps/9panel/js/websoft9.js
-    regexp: '"name":"Java","switch":0,'
-    line: '"name":"Java","switch":1,'
+    regexp: '"name":"Java on Tomcat","switch":0,'
+    line: '"name":"Java on Tomcat","switch":1,'
 
 - name: Set default site I
   shell: cp -rp /data/apps/9panel/*  /data/wwwroot/www.example.com
