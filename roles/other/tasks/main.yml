@@ -25,5 +25,18 @@
   service: name=auto_chown state=started enabled=yes
 
 
+
 - name: Setting File Permission
   shell: find /data/* -type f -exec chmod 640 {} \;
+
+# - name: Setting Directory Permission
+#   shell: find /data/* -type d -exec chmod 750 {} \;
+
+- name: Seting Owner and Group for Apache
+  shell: chown -R www. {{item}}
+  with_items:
+    - /data/wwwroot
+    - /data/apps
+
+- name: Seting Owner and Group for MySQL
+  shell: chown -R mysql. /data/mysql
