@@ -29,7 +29,7 @@
 - name: Setting File Permission
   shell: find /data/* -type f -exec chmod 640 {} \;
 
-- name: Seting Owner and Group for nginx
+- name: Seting Owner and Group
   shell: chown -R www. {{item}}
   with_items:
     - /data/wwwroot
