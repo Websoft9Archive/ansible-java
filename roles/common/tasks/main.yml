@@ -51,6 +51,10 @@
       line: "/mnt/swap swap swap defaults 0 0"
       state: present
 
+- name: change swapfile permission
+  file:
+    path: /mnt/swap
+    mode: 0600
 
 - name: Start redis
   service: name=redis state=started enabled=yes
