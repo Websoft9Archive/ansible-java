@@ -8,7 +8,7 @@
     - {role: nginx_for_tomcat  , tags: "nginx_for_tomcat "} 
     - {role: tomcat,tags: "tomcat"}
     - {role: mysql,tags: "mysql"}
-    - {role: jspmyadmin,tags: "jspmyadmin"}
+    # - {role: jspmyadmin,tags: "jspmyadmin"}
     - {role: 9panel,tags: "9panel"}
     - {role: other,tags: "other"}
 
