@@ -56,5 +56,10 @@
     path: /mnt/swap
     mode: 0600
 
+- name: Fix No space left on device
+  sysctl:
+    name: fs.inotify.max_user_watches
+    value: "262144"
+
 - name: Start redis
   service: name=redis state=started enabled=yes
