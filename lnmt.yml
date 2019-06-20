@@ -1,6 +1,6 @@
 ---
 - name: LNMT
-  hosts: all
+  hosts: server
   remote_user: root
 
   roles:
