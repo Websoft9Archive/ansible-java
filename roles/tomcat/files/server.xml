@@ -29,7 +29,6 @@
 <Host name="localhost" appBase="/data/wwwroot" unpackWARs="true" autoDeploy="true">
     <Context path="" docBase="/data/wwwroot/www.example.com" reloadable="false" crossContext="true"/>
     <Context path="/9panel" docBase="/data/apps/9panel" reloadable="false" crossContext="true"/>
-    <Context path="/jspmyadmin" docBase="/data/apps/jspmyadmin" reloadable="false" crossContext="true"/>
     <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
        prefix="localhost_access_log" suffix=".txt" pattern="%h %l %u %t &quot;%r&quot; %s %b" />
     <Valve className="org.apache.catalina.valves.RemoteIpValve" remoteIpHeader="X-Forwarded-For"
