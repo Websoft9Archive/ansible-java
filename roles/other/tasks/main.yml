@@ -36,11 +36,11 @@
 - name: Seting Owner and Group for MySQL
   shell: chown -R mysql. /data/mysql
 
-- name: judge websoft9 user is exits
-  shell: cat /etc/passwd | grep websoft9
-  ignore_errors: True
-  register: judge_user
+# - name: judge websoft9 user is exits
+#   shell: cat /etc/passwd | grep websoft9
+#   ignore_errors: True
+#   register: judge_user
 
-- name: Remove User
-  shell: userdel -rf websoft9
-  when: judge_user|succeeded
+# - name: Remove User
+#   shell: userdel -rf websoft9
+#   when: judge_user|succeeded
