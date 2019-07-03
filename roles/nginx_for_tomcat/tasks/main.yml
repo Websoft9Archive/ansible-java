@@ -45,15 +45,15 @@
 
 - name: Copy Nginx Configuration 
   copy: src=nginx.conf dest=/etc/nginx
-  notify: restart Nginx
 
 - name: Copy Nginx JSP support Configuration 
   copy: src=jsp.conf dest=/etc/nginx
-  notify: restart Nginx
 
 - name: Copy Nginx other Configuration I
   copy: src=conf.d dest=/etc/nginx
-  notify: restart Nginx
+
+- name: restart nginx
+  service: name=nginx state=restarted enabled=yes
 
 - block:
   - name: Install Certbot

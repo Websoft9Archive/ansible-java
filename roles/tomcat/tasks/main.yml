@@ -45,7 +45,9 @@
 
 - name: copy tomcat.service
   copy: src=tomcat.service dest=/lib/systemd/system/
-  notify: restart tomcat
+
+- name: restart tomcat
+  service: name=tomcat state=restarted enabled=yes
 
 - name: fixed some problems
   lineinfile:
