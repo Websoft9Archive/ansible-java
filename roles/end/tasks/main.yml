@@ -15,8 +15,7 @@
 
   - name: Init for azure
     shell: waagent -deprovision+user --force
-    
-  when: cloud == "azure"
+    when: cloud == "azure"
 
 - name: Remove SSH info
   file: 
