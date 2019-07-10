@@ -1,2 +1,0 @@
-[server]
-13.68.179.69 ansible_ssh_user=websoft9 ansible_ssh_pass=Qwer12345678 ansible_sudo_pass=Qwer12345678

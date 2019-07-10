@@ -41,3 +41,5 @@
       group: www
       recurse: yes
 
+- name: restart tomcat
+  service: name=tomcat state=restarted enabled=yes
