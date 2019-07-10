@@ -13,4 +13,3 @@
     - {role: mysql,tags: "mysql"}
     - {role: 9panel,tags: "9panel"}
     - {role: other,tags: "other"}
-    - {role: end,tags: "end"}
