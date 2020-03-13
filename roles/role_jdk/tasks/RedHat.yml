@@ -1,0 +1,17 @@
+# JDK8版本以及一下版本
+- name: Install openjdk
+  yum:
+    name: "java-1.{{jdk_version}}.0-openjdk"
+  when: jdk_version <="8"
+
+# JDK11版本以及一上版本
+- name: Install openjdk
+  yum:
+    name: "java-{{jdk_version}}-openjdk"
+  when: jdk_version > '8'
+
+# AmazonLinux JDK11版本以及一上版本
+- name: Install openjdk
+  yum:
+    name: "java-{{jdk_version}}"
+  when: jdk_version > '8' and  ansible_distribution == 'Amazon'
