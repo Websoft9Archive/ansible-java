@@ -1,0 +1,80 @@
+# 核心任务
+- name: Java
+  hosts: all
+  become: yes
+  become_method: sudo
+  vars_files:
+    - vars/main.yml
+  vars_prompt:
+    - name: 'jdk_selection'
+      prompt: "Choose JDK version for this installation \n
+      1: JDK 6 (only for CentOS7.x)\n
+      2: JDK 7 (only for CentOS7.x, AmazonLinux)\n
+      3: JDK 8\n
+      4: JDK 11\n"
+      private: no
+      default: 3
+
+    - name: 'tomcat_selection'
+      prompt: "Choose Tomcat version for this installation \n
+      1: Tomcat 7 \n
+      2: Tomcat 8 \n
+      3: Tomcat 9\n"
+      private: no
+      default: 9
+
+    - name: 'mysql_selection'
+      prompt: "Choose MySQL version for this installation \n
+      1: MySQL 5.5(only for CentOS7.x, AmazonLinux)\n
+      2: MySQL MySQL5.6(only for CentOS7.x, AmazonLinux, Ubuntu16.04 )\n
+      3: MySQL 5.7\n
+      4: MySQL 8.0\n"
+      private: no
+      default: 3
+
+  vars:
+    jdk_select:
+      '1': "6"
+      '2': "7"
+      '3': "8"
+      '4': "11"
+
+    tomcat_select:
+      '1': "7.0.100 "
+      '2': "8.5.51"
+      '3': "9.0.31"
+
+    mysql_select:
+      '1': "5.5"
+      '2': "5.6"
+      '3': "5.7"
+      '4': "8.0"
+
+    jdk_version: "{{jdk_select[jdk_selection]}}"
+    tomcat_version: "{{tomcat_select[tomcat_selection]}}"
+    mysql_version: "{{mysql_select[mysql_selection]}}"
+    
+    
+  pre_tasks:
+    - include_vars: roles/role_cloud/vars/cloud_download_url.yml
+      when: region == '1' or region == 1
+
+    - debug:
+        msg: Java will be installed, MySQL version is {{ mysql_version }}, JDK version is {{jdk_version}}, Tomcat is {{tomcat_version}}, region code is {{region}}
+    
+  roles:
+    - {role: role_common, tags: "role_common"}
+    - {role: role_cloud, tags: "role_cloud"}
+    - {role: role_nginx, tags: "role_nginx"}
+    - {role: role_jdk, tags: "role_jdk"}
+    - {role: role_tomcat, tags: "role_tomcat"}
+    - {role: role_mysql, tags: "role_mysql"}
+    - {role: role_redis, tags: "role_redis"}
+    - {role: role_docker, tags: "role_docker"}
+    - {role: role_9panel, tags: "role_9panel"}
+    - {role: role_inotify_watch, tags: "inotify_watch"}
+    - {role: role_init_password, tags: "init_password"}
+    - {role: role_preend, tags: "role_preend"}
+    - {role: role_end, tags: "role_end"}
+      
+
