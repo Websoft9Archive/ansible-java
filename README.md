@@ -18,7 +18,7 @@
 
 ## 组件
 
-包含的核心组件为：JDK, Tomcat, MySQL，可选版本如下：  
+包含的核心组件为：JDK, Nginx, Tomcat, MySQL，可选版本如下：  
 ```
     - name: 'jdk_selection'
       prompt: "Choose JDK version for this installation \n
