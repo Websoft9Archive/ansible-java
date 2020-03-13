@@ -1,7 +1,7 @@
 #全局
 region: "0"
 
-w9panel_set_webs: "nginx" 
+w9panel_webs: "nginx" 
 w9panel_set_infrastructure: "Java(Linux)" 
 
 # JDK版本选择
