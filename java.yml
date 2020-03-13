@@ -25,8 +25,8 @@
 
     - name: 'mysql_selection'
       prompt: "Choose MySQL version for this installation \n
-      1: MySQL 5.5(only for CentOS7.x, AmazonLinux)\n
-      2: MySQL MySQL5.6(only for CentOS7.x, AmazonLinux, Ubuntu16.04 )\n
+      1: MySQL 5.5 (only for CentOS7.x, AmazonLinux)\n
+      2: MySQL 5.6 (only for CentOS7.x, AmazonLinux, Ubuntu16.04 )\n
       3: MySQL 5.7\n
       4: MySQL 8.0\n"
       private: no
