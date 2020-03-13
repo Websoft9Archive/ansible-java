@@ -1,9 +1,8 @@
 #全局
 region: "0"
 
-w9panel_set_infrastructure: "nginx" 
-w9panel_set_apps: 
-    - Java(Linux)
+w9panel_set_webs: "nginx" 
+w9panel_set_infrastructure: "Java(Linux)" 
 
 # JDK版本选择
 jdk_version: "8"
