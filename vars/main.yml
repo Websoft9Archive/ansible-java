@@ -1,0 +1,20 @@
+#全局
+region: "0"
+
+w9panel_set_infrastructure: "nginx" 
+w9panel_set_apps: 
+    - Java(Linux)
+
+# JDK版本选择
+jdk_version: "8"
+tomcat_version: "9.0.31"
+
+# MySQL 版本和默认密码，后面所有应用的密码与此密码保持一致
+mysql_version: "5.7"       
+mysql_root_password: "123456"
+
+# 随机密码处理
+init_db: 
+    mysql:
+      user: root
+      password: "123456"  
