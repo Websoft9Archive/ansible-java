@@ -1,5 +1,5 @@
 
-# Redis 自动化安装与部署
+# Java 自动化安装与部署
 
 本项目是由 [Websoft9](https://www.websoft9.com) 研发的 [Java](https://www.java.com/zh_CN/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 Redis，让原本复杂的安装过程变得没有任何技术门槛。  
 
@@ -20,7 +20,7 @@
 
 包含的核心组件为：JDK, Tomcat, MySQL，可选版本如下：  
 ```
-      - name: 'jdk_selection'
+    - name: 'jdk_selection'
       prompt: "Choose JDK version for this installation \n
       1: JDK 6 (only for CentOS7.x)\n
       2: JDK 7 (only for CentOS7.x, AmazonLinux)\n
@@ -71,7 +71,7 @@
       '2': "5.6"
       '3': "5.7"
       '4': "8.0"
-```
+  ```
 
 我们会定期检查版本准确性，并增加官方最新的stable版本，以保证用户可以顺利安装所需的 Java 版本。
 
