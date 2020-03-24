@@ -4,7 +4,10 @@ region: "0"
 w9panel_webs: "nginx" 
 w9panel_set_infrastructure: "Java(Linux)" 
 
-# JDK版本选择
+# install certbot
+preend_certbot: True
+
+# JDK default version
 jdk_version: "8"
 tomcat_version: "9.0.31"
 
