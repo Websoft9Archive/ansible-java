@@ -65,9 +65,9 @@
   roles:
     - {role: role_common, tags: "role_common"}
     - {role: role_cloud, tags: "role_cloud"}
-    - {role: role_nginx, tags: "role_nginx"}
     - {role: role_jdk, tags: "role_jdk"}
     - {role: role_tomcat, tags: "role_tomcat"}
+    - {role: role_nginx, tags: "role_nginx"}
     - {role: role_mysql, tags: "role_mysql"}
     - {role: role_redis, tags: "role_redis"}
     - {role: role_docker, tags: "role_docker"}
@@ -76,5 +76,4 @@
     - {role: role_init_password, tags: "init_password"}
     - {role: role_preend, tags: "role_preend"}
     - {role: role_end, tags: "role_end"}
-      
 

@@ -2,7 +2,10 @@
 region: "0"
 
 w9panel_webs: "nginx" 
+w9panel_webs_extra: "tomcat"
 w9panel_set_infrastructure: "Java(Linux)" 
+w9panel_set_apps: 
+  - Example
 
 # install certbot
 preend_certbot: True
