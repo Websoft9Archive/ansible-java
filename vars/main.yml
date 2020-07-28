@@ -1,14 +1,13 @@
 #全局
 region: "0"
 
+common_os_support: ["CentOS", "Amazon"]
+
 w9panel_webs: "nginx" 
 w9panel_webs_extra: "tomcat"
 w9panel_set_infrastructure: "Java on Tomcat runtime (Linux)" 
 w9panel_set_apps: 
   - Example
-
-# install certbot
-preend_certbot: True
 
 # JDK default version
 jdk_version: "8"
@@ -29,5 +28,5 @@ mysql_root_password: "123456"
 # 随机密码处理
 init_db: 
     mysql:
-      user: root
+      admin: root
       password: "123456"  
