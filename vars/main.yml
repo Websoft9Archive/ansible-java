@@ -9,10 +9,6 @@ w9panel_set_infrastructure: "Java on Tomcat runtime (Linux)"
 w9panel_set_apps: 
   - Example
 
-# JDK default version
-jdk_version: "8"
-tomcat_version: "9.0.37"
-
 # link tomcat
 nginx_reverse_proxy_port: "8080"
 
