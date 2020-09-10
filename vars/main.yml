@@ -11,7 +11,7 @@ w9panel_set_apps:
 
 # JDK default version
 jdk_version: "8"
-tomcat_version: "9.0.31"
+tomcat_version: "9.0.37"
 
 # link tomcat
 nginx_reverse_proxy_port: "8080"
