@@ -1,5 +1,0 @@
-- name: Install open jdk
-  apt:
-    name: ["openjdk-{{jdk_version}}-jdk","openjdk-{{jdk_version}}-jre"]
-    update_cache: yes
-

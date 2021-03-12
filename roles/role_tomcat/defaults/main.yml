@@ -1,2 +1,0 @@
-tomcat_version: "9.0.31" # 7.0.100/8.xx.xx/9.xx.xx 具体版本号https://tomcat.apache.org/查看
-tomcat_url: https://downloads.apache.org/tomcat/tomcat-{{tomcat_version[0]}}/v{{tomcat_version}}/bin/apache-tomcat-{{tomcat_version}}.zip

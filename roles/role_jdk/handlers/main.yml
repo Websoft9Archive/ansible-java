@@ -1,4 +1,0 @@
-- name: java Version
-  debug:
-    var: java_ver.stderr_lines[0]
-    
