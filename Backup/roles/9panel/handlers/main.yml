@@ -1,6 +1,0 @@
----
-- name: restart nginx
-  service: name=nginx state=restarted enabled=yes
-
-- name: restart tomcat
-  service: name=tomcat state=restarted enabled=yes
