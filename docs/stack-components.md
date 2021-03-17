@@ -31,7 +31,7 @@ Docker root directory: */var/lib/docker*
 Docker image directory: */var/lib/docker/image*   
 Docker daemon.json: please create it when you need and save to to the directory */etc/docker*   
 
-###  phpMyAdmin
+### phpMyAdmin
 
 phpMyAdmin is a visual MySQL management tool, is installed based on docker.  
 
