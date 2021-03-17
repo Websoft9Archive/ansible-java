@@ -16,7 +16,8 @@ module.exports = [
     title: '实践指南',
     collapsable: false,
     children: [
-      '/zh/solution-smtp',
+      '/zh/solution-deployment',
+      '/zh/solution-migration',
       '/zh/solution-https',
       '/zh/solution-cli',
       '/zh/solution-backup',
@@ -31,6 +32,8 @@ module.exports = [
     children: [
       '/zh/admin-services',
       '/zh/admin-mysql',
+      ['https://support.websoft9.com/docs/tomcat/zh','Tomcat'],
+      ['https://support.websoft9.com/docs/jetty/zh','Jetty'],
       ['https://support.websoft9.com/docs/linux/zh/webs-nginx.html','Nginx'],
       ['https://support.websoft9.com/docs/linux/zh/admin-practices.html','Linux'],
     ]
