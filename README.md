@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**Java Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Java](https://www.java.com/zh-CN/) based on Ansible and shell. It helps user install Java and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+**Java Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Java](https://openjdk.java.net/) based on Ansible and shell. It helps user install Java and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ## System Requirement
 
@@ -19,7 +19,7 @@ System Requirement to install this repository are as following：
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
 | Server Configuration | vCPU no less than 1 core, Memory no less than 1 GIB, Storage no less than 20 GB, Swap no less than 2GB |Bandwidth no less than 100M|
 
-To learn more information, please view [Installation & Configuration](https://www.java.com/zh-CN/download/help/linux_x64_install.html).
+To learn more information, please view [Installation & Configuration](https://openjdk.java.net/install/).
 
 ## Ecosystem
 
@@ -62,7 +62,7 @@ This program provided by Websoft9 contains a series of software with separate co
 
 #### How to install and view the latest release?
 
-This repository install way is Package isntallation, you can  view the version from [Official URL](https://www.java.com/zh-CN/download/manual.jsp).  
+This repository install way is Package isntallation, you can  view the version from [Official URL](https://openjdk.java.net/projects/jdk/).  
 We will check [Release version](https://github.com/Websoft9/ansible-java/releases) regularly. Update and test this project to ensure that users can successfully install the required version of Java.
 
 #### Can I run this repository on Ansible Tower? 
