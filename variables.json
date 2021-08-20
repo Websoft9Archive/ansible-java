@@ -1,18 +1,18 @@
 {
   "name": "java",
   "trademark": "Java",
-  "official_url": "https://www.java.com/zh-CN/",
+  "official_url": "https://openjdk.java.net/",
   "support_os": "CentOS7.x, Amazon Linux2",
   "requirements_cpu": "1",
   "requirements_memory": "1",
   "requirements_Bandwidth": "100",
   "requirements_disk": "20",
   "requirements_swap": "2",
-  "requirements_configure_url": "https://www.java.com/zh-CN/download/help/linux_x64_install.html",
+  "requirements_configure_url": "https://openjdk.java.net/install/",
   "components": "JDK, Nginx, ,Tomcat, Docker, MySQL, phpmyadmin on docker",
   "install_way": {
     "en": "Package isntallation",
     "zh": "包安装"
   },
-  "install_url": "https://www.java.com/zh-CN/download/manual.jsp"
+  "install_url": "https://openjdk.java.net/projects/jdk/"
 }
