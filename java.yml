@@ -17,9 +17,9 @@
 
     - name: 'tomcat_selection'
       prompt: "Choose Tomcat version for this installation \n
-      1: Tomcat 7 \n
-      2: Tomcat 8 \n
-      3: Tomcat 9\n"
+      1: Tomcat 8 \n
+      2: Tomcat 9 \n
+      3: Tomcat 10\n"
       private: no
       default: 9
 
@@ -40,9 +40,9 @@
       '4': "11"
 
     tomcat_select:
-      '1': "7"
-      '2': "8"
-      '3': "9"
+      '1': "8"
+      '2': "9"
+      '3': "10"
 
     mysql_select:
       '1': "5.5"
