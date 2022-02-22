@@ -1,8 +1,6 @@
 #全局
 region: "0"
 
-common_os_support: ["CentOS", "Amazon"]
-
 w9panel_webs: "nginx" 
 w9panel_webs_extra: "tomcat"
 w9panel_set_infrastructure: "Java on Tomcat runtime (Linux)" 
